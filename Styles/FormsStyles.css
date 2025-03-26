@@ -1,0 +1,279 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    width: 45%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.company-name {
+    width: 45%;
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0077b6;
+}
+
+.form-title {
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+/* Main Form Containers */
+.form-section {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #f9f9f9;
+}
+
+/* Flex containers */
+.flex-container {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+/* Section widths */
+.request-section {
+    width: 20%;
+}
+
+.account-section {
+    width: 40%;
+}
+
+.customer-section {
+    width: 40%;
+}
+
+.print-section {
+    width: 30%;
+}
+
+.product-section {
+    width: 70%;
+}
+
+.test-section {
+    width: 33.33%;
+}
+
+/* Section headers */
+.section-header {
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    color: #0077b6;
+}
+
+/* Form elements */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: normal;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* Checkbox styling */
+.checkbox-group {
+    margin-bottom: 15px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+    .checkbox-label input[type="checkbox"] {
+        margin-right: 8px;
+    }
+
+/* Value input within checkbox label */
+.checkbox-with-value {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+    .checkbox-with-value input[type="checkbox"] {
+        margin-right: 8px;
+    }
+
+    .checkbox-with-value .value-input {
+        width: 100px;
+        margin-left: 10px;
+        margin-bottom: 0;
+    }
+
+.value-label {
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+/* Field rows */
+.field-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+    .field-row label {
+        width: 35%;
+        margin-bottom: 0;
+    }
+
+    .field-row input,
+    .field-row select {
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+/* Special field rows for product details */
+.product-detail-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+    .product-detail-row .field-group {
+        flex: 1;
+        min-width: 200px;
+    }
+
+.qty-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+    .qty-row label {
+        margin-bottom: 0;
+    }
+
+    .qty-row input {
+        width: 70px;
+        margin-bottom: 0;
+    }
+
+/* File upload styling */
+.file-upload {
+    margin-bottom: 15px;
+}
+
+    .file-upload label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .file-upload input[type="file"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px dashed #ddd;
+        border-radius: 4px;
+        background-color: #f5f5f5;
+    }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .request-section,
+    .account-section,
+    .customer-section,
+    .print-section,
+    .product-section,
+    .test-section {
+        width: 100%;
+    }
+
+    .field-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+        .field-row label {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+    .checkbox-with-value {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+        .checkbox-with-value .value-input {
+            margin-left: 25px;
+            margin-top: 5px;
+        }
+}
+
+.logout-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+    .logout-button:hover {
+        background-color: #c9302c;
+    }

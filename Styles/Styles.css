@@ -1,0 +1,184 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', 'sans-serif';
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 1000px;
+    min-height: 700px; /* Increased from 600px to accommodate signup form */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.info-side {
+    width: 40%;
+    background-color: #0077b6;
+    color: white;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .info-side h1 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .info-side p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+
+.logo {
+    width: 200px;
+    margin-bottom: 40px;
+}
+
+.form-side {
+    width: 60%;
+    background-color: white;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto; /* Added to ensure content is scrollable if needed */
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 40px;
+    position: sticky; /* Keep tabs visible when scrolling */
+    top: 0;
+    background-color: white;
+    z-index: 10;
+    padding-top: 20px;
+}
+
+.tab {
+    padding: 12px 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: #999;
+}
+
+    .tab.active {
+        color: #0077b6;
+        border-bottom: 3px solid #0077b6;
+    }
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px; /* Added to ensure sufficient space at bottom */
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+    font-size: 16px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+    input:focus {
+        outline: none;
+        border-color: #0077b6;
+    }
+
+.custom-button {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+    button:hover {
+        background-color: #005f92;
+    }
+
+.form-footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    padding-bottom: 20px; /* Added padding at bottom */
+}
+
+    .form-footer a {
+        color: #0077b6;
+        text-decoration: none;
+    }
+
+#signup-form {
+    display: none;
+}
+
+.forgot-password {
+    text-align: right;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+    .forgot-password a {
+        color: #0077b6;
+        text-decoration: none;
+    }
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .info-side, .form-side {
+        width: 100%;
+        padding: 40px;
+    }
+
+    .info-side {
+        padding-bottom: 50px;
+    }
+}
+
